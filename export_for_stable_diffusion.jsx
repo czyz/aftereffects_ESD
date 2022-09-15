@@ -1,8 +1,7 @@
 
-
 /*
 Code for Import https://scriptui.joonas.me — (Triple click to select): 
-{"items":{"item-0":{"id":0,"type":"Dialog","parentId":false,"style":{"enabled":true,"varName":"ExportToStableDiffusion","windowType":"Dialog","creationProps":{"su1PanelCoordinates":false,"maximizeButton":false,"minimizeButton":false,"independent":false,"closeButton":true,"borderless":false,"resizeable":false},"text":"Export to Stable Diffusion","preferredSize":[300,0],"margins":16,"orientation":"column","spacing":10,"alignChildren":["center","top"]}},"item-6":{"id":6,"type":"Panel","parentId":49,"style":{"enabled":true,"varName":"OutputLocationPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Output Location","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-7":{"id":7,"type":"EditText","parentId":6,"style":{"enabled":true,"varName":"OutputLocation","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"Output Location","justify":"left","preferredSize":[357,0],"alignment":null,"helpTip":null}},"item-8":{"id":8,"type":"Button","parentId":45,"style":{"enabled":true,"varName":"ExportSequence","text":"Sequence","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":"Export the entire sequence."}},"item-9":{"id":9,"type":"StaticText","parentId":43,"style":{"enabled":true,"varName":"ExplanationText","creationProps":{},"softWrap":true,"text":"Export the active/selected composition to the specified location, as well as a batch file to pass to the dream.py command which will include your keyframed strength and scale values.","justify":"left","preferredSize":[307,0],"alignment":"fill","helpTip":null}},"item-10":{"id":10,"type":"Checkbox","parentId":22,"style":{"enabled":true,"varName":"ESRGAN_enable","text":"Enable","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}},"item-15":{"id":15,"type":"Slider","parentId":17,"style":{"enabled":true,"varName":"ESRGAN_Strength","preferredSize":[367,0],"alignment":"fill","helpTip":null}},"item-16":{"id":16,"type":"Panel","parentId":22,"style":{"enabled":true,"varName":"UpscalingFactorPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Upscaling Factor","preferredSize":[null,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-17":{"id":17,"type":"Panel","parentId":22,"style":{"enabled":true,"varName":"UpscalingStrengthPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Strength","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":5,"alignChildren":["left","top"],"alignment":"fill"}},"item-18":{"id":18,"type":"RadioButton","parentId":16,"style":{"enabled":true,"varName":"Upscale4x","text":"4x","preferredSize":[150,0],"alignment":null,"helpTip":null,"checked":false}},"item-19":{"id":19,"type":"RadioButton","parentId":16,"style":{"enabled":true,"varName":"Upscale2x","text":"2x","preferredSize":[150,0],"alignment":null,"helpTip":null,"checked":true}},"item-21":{"id":21,"type":"TabbedPanel","parentId":49,"style":{"enabled":true,"varName":"","preferredSize":[450,0],"margins":10,"alignment":null,"selection":22}},"item-22":{"id":22,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"UpscalingTab","text":"Upscaling","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-23":{"id":23,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"FaceRestTab","text":"Face Restoration","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-24":{"id":24,"type":"Checkbox","parentId":23,"style":{"enabled":true,"varName":"GFPGAN_enable","text":"Enable","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}},"item-25":{"id":25,"type":"Slider","parentId":26,"style":{"enabled":true,"varName":"GFPGAN_strength","preferredSize":[367,0],"alignment":"fill","helpTip":null}},"item-26":{"id":26,"type":"Panel","parentId":23,"style":{"enabled":true,"varName":"FaceRestStrengthPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Strength","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-27":{"id":27,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"SaveOrigTab","text":"Save Original","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-28":{"id":28,"type":"Checkbox","parentId":27,"style":{"enabled":true,"varName":"Save_Original","text":"Enable","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-29":{"id":29,"type":"EditText","parentId":17,"style":{"enabled":true,"varName":"ESRGAN_StrengthText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"75","justify":"right","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-30":{"id":30,"type":"EditText","parentId":26,"style":{"enabled":true,"varName":"GFPGAN_strengthText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"75","justify":"left","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-31":{"id":31,"type":"Button","parentId":6,"style":{"enabled":true,"varName":"BrowseButton","text":"Browse…","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-32":{"id":32,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"SeedTab","text":"Seed","orientation":"row","spacing":10,"alignChildren":["left","top"]}},"item-33":{"id":33,"type":"DropDownList","parentId":34,"style":{"enabled":true,"varName":"RecentSeeds","text":"DropDownList","listItems":"Item 1, -, Item 2","preferredSize":[0,0],"alignment":"fill","selection":0,"helpTip":null}},"item-34":{"id":34,"type":"Panel","parentId":32,"style":{"enabled":true,"varName":"RecentSeedPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Recent Seeds","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-35":{"id":35,"type":"EditText","parentId":36,"style":{"enabled":true,"varName":"SeedText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"1111111111","justify":"left","preferredSize":[286,0],"alignment":null,"helpTip":null}},"item-36":{"id":36,"type":"Panel","parentId":32,"style":{"enabled":true,"varName":"SeedPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Seed","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-37":{"id":37,"type":"StaticText","parentId":17,"style":{"enabled":true,"varName":"percentsign","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"%","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-38":{"id":38,"type":"StaticText","parentId":26,"style":{"enabled":true,"varName":"percentsign","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"%","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-43":{"id":43,"type":"Panel","parentId":49,"style":{"enabled":true,"varName":"ExportPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Panel","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-44":{"id":44,"type":"Button","parentId":45,"style":{"enabled":true,"varName":"ExportCurrentFrame","text":"Current Frame","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":"Export only the current frame.\\nTo test settings or to generate a still image."}},"item-45":{"id":45,"type":"Panel","parentId":43,"style":{"enabled":true,"varName":"ExportButtonsPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Export","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-46":{"id":46,"type":"Button","parentId":36,"style":{"enabled":true,"varName":"SeedGenerate","text":"Generate","justify":"center","preferredSize":[0,0],"alignment":"center","helpTip":null}},"item-47":{"id":47,"type":"TabbedPanel","parentId":0,"style":{"enabled":true,"varName":"mainPanel","preferredSize":[0,0],"margins":10,"alignment":null,"selection":49}},"item-48":{"id":48,"type":"Tab","parentId":47,"style":{"enabled":true,"varName":"SetupTab","text":"Setup","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-49":{"id":49,"type":"Tab","parentId":47,"style":{"enabled":true,"varName":"OutputTab","text":"Output","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-50":{"id":50,"type":"Panel","parentId":48,"style":{"enabled":true,"varName":"AddCtrl","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"First!","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":"left"}},"item-51":{"id":51,"type":"Button","parentId":50,"style":{"enabled":true,"varName":"InitialSetup","text":"Initial Setup","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-52":{"id":52,"type":"Button","parentId":53,"style":{"enabled":true,"varName":"AddPrompt","text":"+ Prompt TXT","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-53":{"id":53,"type":"Panel","parentId":48,"style":{"enabled":true,"varName":"PromptLayerManage","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Prompt Layer Management","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-54":{"id":54,"type":"Button","parentId":53,"style":{"enabled":true,"varName":"ReorderPrompts","text":"Reorder Prompt Layers","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-55":{"id":55,"type":"Button","parentId":53,"style":{"enabled":true,"varName":"HideShowPromptLayers","text":"Hide/Show Prompt Layers","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}}},"order":[0,47,49,6,7,31,21,22,10,16,19,18,17,15,29,37,23,24,26,25,30,38,27,28,32,36,35,46,34,33,43,9,45,44,8,48,50,51,53,52,54,55],"settings":{"importJSON":true,"indentSize":false,"cepExport":false,"includeCSSJS":true,"showDialog":true,"functionWrapper":false,"afterEffectsDockable":false,"itemReferenceList":"None"},"activeId":22}
+{"items":{"item-0":{"id":0,"type":"Dialog","parentId":false,"style":{"enabled":true,"varName":"ExportToStableDiffusion","windowType":"Dialog","creationProps":{"su1PanelCoordinates":false,"maximizeButton":false,"minimizeButton":false,"independent":false,"closeButton":true,"borderless":false,"resizeable":false},"text":"Export to Stable Diffusion","preferredSize":[300,0],"margins":16,"orientation":"column","spacing":10,"alignChildren":["center","top"]}},"item-7":{"id":7,"type":"EditText","parentId":63,"style":{"enabled":true,"varName":"OutputLocation","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"Output Location","justify":"left","preferredSize":[352,0],"alignment":"fill","helpTip":null}},"item-8":{"id":8,"type":"Button","parentId":74,"style":{"enabled":true,"varName":"ExportSequence","text":"Sequence","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":"Export the entire sequence."}},"item-9":{"id":9,"type":"StaticText","parentId":43,"style":{"enabled":true,"varName":"ExplanationText","creationProps":{},"softWrap":true,"text":"Export the active/selected composition to the specified location, as well as a batch file to pass to the dream.py command which will include your keyframed strength and scale values.","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-10":{"id":10,"type":"Checkbox","parentId":22,"style":{"enabled":true,"varName":"ESRGAN_enable","text":"Enable","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}},"item-15":{"id":15,"type":"Slider","parentId":17,"style":{"enabled":true,"varName":"ESRGAN_Strength","preferredSize":[367,0],"alignment":"fill","helpTip":null}},"item-16":{"id":16,"type":"Panel","parentId":22,"style":{"enabled":true,"varName":"UpscalingFactorPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Upscaling Factor","preferredSize":[null,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-17":{"id":17,"type":"Panel","parentId":22,"style":{"enabled":true,"varName":"UpscalingStrengthPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Strength","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":5,"alignChildren":["left","top"],"alignment":"fill"}},"item-18":{"id":18,"type":"RadioButton","parentId":16,"style":{"enabled":true,"varName":"Upscale4x","text":"4x","preferredSize":[150,0],"alignment":null,"helpTip":null,"checked":false}},"item-19":{"id":19,"type":"RadioButton","parentId":16,"style":{"enabled":true,"varName":"Upscale2x","text":"2x","preferredSize":[150,0],"alignment":null,"helpTip":null,"checked":true}},"item-21":{"id":21,"type":"TabbedPanel","parentId":49,"style":{"enabled":true,"varName":"","preferredSize":[450,0],"margins":10,"alignment":"fill","selection":71}},"item-22":{"id":22,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"UpscalingTab","text":"Upscaling","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-23":{"id":23,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"FaceRestTab","text":"Face Restoration","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-24":{"id":24,"type":"Checkbox","parentId":23,"style":{"enabled":true,"varName":"GFPGAN_enable","text":"Enable","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}},"item-25":{"id":25,"type":"Slider","parentId":26,"style":{"enabled":true,"varName":"GFPGAN_strength","preferredSize":[367,0],"alignment":"fill","helpTip":null}},"item-26":{"id":26,"type":"Panel","parentId":23,"style":{"enabled":true,"varName":"FaceRestStrengthPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Strength","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-27":{"id":27,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"MiscTab","text":"Misc","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-28":{"id":28,"type":"Checkbox","parentId":27,"style":{"enabled":true,"varName":"Save_Original","text":"Save Original","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-29":{"id":29,"type":"EditText","parentId":17,"style":{"enabled":true,"varName":"ESRGAN_StrengthText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"75","justify":"right","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-30":{"id":30,"type":"EditText","parentId":26,"style":{"enabled":true,"varName":"GFPGAN_strengthText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"75","justify":"left","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-31":{"id":31,"type":"Button","parentId":63,"style":{"enabled":true,"varName":"BrowseButton","text":"Browse…","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-32":{"id":32,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"SeedTab","text":"Seed","orientation":"row","spacing":10,"alignChildren":["left","top"]}},"item-33":{"id":33,"type":"DropDownList","parentId":34,"style":{"enabled":true,"varName":"RecentSeeds","text":"DropDownList","listItems":"Item 1, -, Item 2","preferredSize":[0,0],"alignment":"fill","selection":0,"helpTip":null}},"item-34":{"id":34,"type":"Panel","parentId":32,"style":{"enabled":true,"varName":"RecentSeedPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Recent Seeds","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-35":{"id":35,"type":"EditText","parentId":36,"style":{"enabled":true,"varName":"SeedText","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"1111111111","justify":"left","preferredSize":[286,0],"alignment":null,"helpTip":null}},"item-36":{"id":36,"type":"Panel","parentId":32,"style":{"enabled":true,"varName":"SeedPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Seed","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-37":{"id":37,"type":"StaticText","parentId":17,"style":{"enabled":true,"varName":"percentsign","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"%","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-38":{"id":38,"type":"StaticText","parentId":26,"style":{"enabled":true,"varName":"percentsign","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"%","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-43":{"id":43,"type":"Panel","parentId":49,"style":{"enabled":true,"varName":"ExportPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Export","preferredSize":[0,0],"margins":10,"orientation":"row","spacing":10,"alignChildren":["right","center"],"alignment":"right"}},"item-44":{"id":44,"type":"Button","parentId":74,"style":{"enabled":true,"varName":"ExportCurrentFrame","text":"Current Frame","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":"Export only the current frame.\\nTo test settings or to generate a still image."}},"item-46":{"id":46,"type":"Button","parentId":36,"style":{"enabled":true,"varName":"SeedGenerate","text":"Generate","justify":"center","preferredSize":[0,0],"alignment":"center","helpTip":null}},"item-47":{"id":47,"type":"TabbedPanel","parentId":0,"style":{"enabled":true,"varName":"mainPanel","preferredSize":[0,0],"margins":10,"alignment":null,"selection":49}},"item-48":{"id":48,"type":"Tab","parentId":47,"style":{"enabled":true,"varName":"SetupTab","text":"Setup","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-49":{"id":49,"type":"Tab","parentId":47,"style":{"enabled":true,"varName":"OutputTab","text":"Output","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-50":{"id":50,"type":"Panel","parentId":48,"style":{"enabled":true,"varName":"AddCtrl","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"First!","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":"left"}},"item-51":{"id":51,"type":"Button","parentId":50,"style":{"enabled":true,"varName":"InitialSetup","text":"Initial Setup","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-52":{"id":52,"type":"Button","parentId":53,"style":{"enabled":true,"varName":"AddPrompt","text":"+ Prompt Layer","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-53":{"id":53,"type":"Panel","parentId":48,"style":{"enabled":true,"varName":"PromptLayerManage","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Prompt Layer Management","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-54":{"id":54,"type":"Button","parentId":53,"style":{"enabled":true,"varName":"ReorderPrompts","text":"Reorder Prompt Layers","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-55":{"id":55,"type":"Button","parentId":59,"style":{"enabled":true,"varName":"ShowPromptLayers","text":"Show","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-56":{"id":56,"type":"DropDownList","parentId":58,"style":{"enabled":true,"varName":"SamplerMenu","text":"DropDownList","listItems":"ddim,\nk_dpm_2_a,\nk_dpm_2,\nk_euler_a,\nk_euler,\nk_heun,\nk_lms,\nplms","preferredSize":[0,0],"alignment":null,"selection":6,"helpTip":null}},"item-57":{"id":57,"type":"Checkbox","parentId":27,"style":{"enabled":true,"varName":"Seamless","text":"Seamless","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-58":{"id":58,"type":"Panel","parentId":27,"style":{"enabled":true,"varName":"SamplerPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Sampler","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-59":{"id":59,"type":"Panel","parentId":53,"style":{"enabled":true,"varName":"PromptLayerVisibility","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Prompt Layer Visibility","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-60":{"id":60,"type":"Button","parentId":59,"style":{"enabled":true,"varName":"HidePromptLayers","text":"Hide","justify":"center","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-61":{"id":61,"type":"Button","parentId":48,"style":{"enabled":true,"varName":"MakeExplainComp","text":"Make Explain Comp","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-62":{"id":62,"type":"RadioButton","parentId":68,"style":{"enabled":true,"varName":"omitImagePathButton","text":"Omit","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":false}},"item-63":{"id":63,"type":"Group","parentId":71,"style":{"enabled":true,"varName":"outputLocationGroup","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","center"],"alignment":"fill"}},"item-64":{"id":64,"type":"RadioButton","parentId":68,"style":{"enabled":true,"varName":"includeImagePathButton","text":"Include","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":false}},"item-67":{"id":67,"type":"RadioButton","parentId":68,"style":{"enabled":true,"varName":"specifiedImagePathButton","text":"Specified","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}},"item-68":{"id":68,"type":"Group","parentId":71,"style":{"enabled":true,"varName":"pathRadioButtonGroup","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","center"],"alignment":"fill"}},"item-69":{"id":69,"type":"Group","parentId":71,"style":{"enabled":true,"varName":"examplePathGroup","preferredSize":[0,0],"margins":0,"orientation":"column","spacing":10,"alignChildren":["left","center"],"alignment":"fill"}},"item-70":{"id":70,"type":"EditText","parentId":69,"style":{"enabled":true,"varName":"specifiedImagePath","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"C:\\\\Users\\\\skype\\\\Resilio Sync\\\\Blender\\\\stablediffusion_jobs\\\\","justify":"left","preferredSize":[0,0],"alignment":"fill","helpTip":null}},"item-71":{"id":71,"type":"Tab","parentId":21,"style":{"enabled":true,"varName":"outputLocationTab","text":"Location","orientation":"column","spacing":10,"alignChildren":["left","top"]}},"item-72":{"id":72,"type":"Panel","parentId":69,"style":{"enabled":true,"varName":"samplePathPanel","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Example Paths","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":"fill"}},"item-73":{"id":73,"type":"StaticText","parentId":72,"style":{"enabled":true,"varName":"samplePaths","creationProps":{"truncate":"none","multiline":true,"scrolling":false},"softWrap":true,"text":"Sample Path","justify":"left","preferredSize":[0,100],"alignment":"fill","helpTip":null}},"item-74":{"id":74,"type":"Group","parentId":43,"style":{"enabled":true,"varName":"exportButtonsGroup","preferredSize":[0,0],"margins":0,"orientation":"column","spacing":10,"alignChildren":["center","center"],"alignment":null}},"item-75":{"id":75,"type":"Checkbox","parentId":74,"style":{"enabled":true,"varName":"StartRenderCheckbox","text":"Start Render","preferredSize":[0,0],"alignment":null,"helpTip":null,"checked":true}}},"order":[0,47,49,21,71,63,7,31,68,64,62,67,69,70,72,73,22,10,16,19,18,17,15,29,37,23,24,26,25,30,38,27,28,57,58,56,32,36,35,46,34,33,43,9,74,44,8,75,48,50,51,53,52,54,59,55,60,61],"settings":{"importJSON":true,"indentSize":false,"cepExport":false,"includeCSSJS":true,"showDialog":true,"functionWrapper":false,"afterEffectsDockable":false,"itemReferenceList":"None"},"activeId":7}
 */ 
 
 // EXPORTTOSTABLEDIFFUSION
@@ -31,29 +30,86 @@ var OutputTab = mainPanel.add("tab", undefined, undefined, {name: "OutputTab"});
     OutputTab.spacing = 10; 
     OutputTab.margins = 10; 
 
-// OUTPUTLOCATIONPANEL
-// ===================
-var OutputLocationPanel = OutputTab.add("panel", undefined, undefined, {name: "OutputLocationPanel"}); 
-    OutputLocationPanel.text = "Output Location"; 
-    OutputLocationPanel.orientation = "row"; 
-    OutputLocationPanel.alignChildren = ["left","top"]; 
-    OutputLocationPanel.spacing = 10; 
-    OutputLocationPanel.margins = 10; 
-    OutputLocationPanel.alignment = ["fill","top"]; 
-
-var OutputLocation = OutputLocationPanel.add('edittext {properties: {name: "OutputLocation"}}'); 
-    OutputLocation.text = "Output Location"; 
-    OutputLocation.preferredSize.width = 357; 
-
-var BrowseButton = OutputLocationPanel.add("button", undefined, undefined, {name: "BrowseButton"}); 
-    BrowseButton.text = "Browse…"; 
-
 // TPANEL1
 // =======
 var tpanel1 = OutputTab.add("tabbedpanel", undefined, undefined, {name: "tpanel1"}); 
     tpanel1.alignChildren = "fill"; 
     tpanel1.preferredSize.width = 450; 
     tpanel1.margins = 0; 
+    tpanel1.alignment = ["fill","top"]; 
+
+// OUTPUTLOCATIONTAB
+// =================
+var outputLocationTab = tpanel1.add("tab", undefined, undefined, {name: "outputLocationTab"}); 
+    outputLocationTab.text = "Location"; 
+    outputLocationTab.orientation = "column"; 
+    outputLocationTab.alignChildren = ["left","top"]; 
+    outputLocationTab.spacing = 10; 
+    outputLocationTab.margins = 10; 
+
+// OUTPUTLOCATIONGROUP
+// ===================
+var outputLocationGroup = outputLocationTab.add("group", undefined, {name: "outputLocationGroup"}); 
+    outputLocationGroup.orientation = "row"; 
+    outputLocationGroup.alignChildren = ["left","center"]; 
+    outputLocationGroup.spacing = 10; 
+    outputLocationGroup.margins = 0; 
+    outputLocationGroup.alignment = ["fill","top"]; 
+
+var OutputLocation = outputLocationGroup.add('edittext {properties: {name: "OutputLocation"}}'); 
+    OutputLocation.text = "Output Location"; 
+    OutputLocation.preferredSize.width = 352; 
+    OutputLocation.alignment = ["left","fill"]; 
+
+var BrowseButton = outputLocationGroup.add("button", undefined, undefined, {name: "BrowseButton"}); 
+    BrowseButton.text = "Browse…"; 
+
+// PATHRADIOBUTTONGROUP
+// ====================
+var pathRadioButtonGroup = outputLocationTab.add("group", undefined, {name: "pathRadioButtonGroup"}); 
+    pathRadioButtonGroup.orientation = "row"; 
+    pathRadioButtonGroup.alignChildren = ["left","center"]; 
+    pathRadioButtonGroup.spacing = 10; 
+    pathRadioButtonGroup.margins = 0; 
+    pathRadioButtonGroup.alignment = ["fill","top"]; 
+
+var includeImagePathButton = pathRadioButtonGroup.add("radiobutton", undefined, undefined, {name: "includeImagePathButton"}); 
+    includeImagePathButton.text = "Include"; 
+
+var omitImagePathButton = pathRadioButtonGroup.add("radiobutton", undefined, undefined, {name: "omitImagePathButton"}); 
+    omitImagePathButton.text = "Omit"; 
+
+var specifiedImagePathButton = pathRadioButtonGroup.add("radiobutton", undefined, undefined, {name: "specifiedImagePathButton"}); 
+    specifiedImagePathButton.text = "Specified"; 
+    specifiedImagePathButton.value = true; 
+
+// EXAMPLEPATHGROUP
+// ================
+var examplePathGroup = outputLocationTab.add("group", undefined, {name: "examplePathGroup"}); 
+    examplePathGroup.orientation = "column"; 
+    examplePathGroup.alignChildren = ["left","center"]; 
+    examplePathGroup.spacing = 10; 
+    examplePathGroup.margins = 0; 
+    examplePathGroup.alignment = ["fill","top"]; 
+
+var specifiedImagePath = examplePathGroup.add('edittext {properties: {name: "specifiedImagePath"}}'); 
+    specifiedImagePath.text = "C:\\Users\\skype\\Resilio Sync\\Blender\\stablediffusion_jobs\\"; 
+    specifiedImagePath.alignment = ["fill","center"]; 
+
+// SAMPLEPATHPANEL
+// ===============
+var samplePathPanel = examplePathGroup.add("panel", undefined, undefined, {name: "samplePathPanel"}); 
+    samplePathPanel.text = "Example Paths"; 
+    samplePathPanel.orientation = "column"; 
+    samplePathPanel.alignChildren = ["left","top"]; 
+    samplePathPanel.spacing = 10; 
+    samplePathPanel.margins = 10; 
+    samplePathPanel.alignment = ["fill","center"]; 
+
+var samplePaths = samplePathPanel.add("statictext", undefined, undefined, {name: "samplePaths", multiline: true}); 
+    samplePaths.text = "Sample Path"; 
+    samplePaths.preferredSize.height = 100; 
+    samplePaths.alignment = ["fill","top"]; 
 
 // UPSCALINGTAB
 // ============
@@ -100,7 +156,7 @@ var UpscalingStrengthPanel = UpscalingTab.add("panel", undefined, undefined, {na
 var ESRGAN_Strength = UpscalingStrengthPanel.add("slider", undefined, undefined, undefined, undefined, {name: "ESRGAN_Strength"}); 
     ESRGAN_Strength.minvalue = 0; 
     ESRGAN_Strength.maxvalue = 100; 
-    ESRGAN_Strength.value = 75; 
+    ESRGAN_Strength.value = 50; 
     ESRGAN_Strength.preferredSize.width = 367; 
     ESRGAN_Strength.alignment = ["left","fill"]; 
 
@@ -137,7 +193,7 @@ var FaceRestStrengthPanel = FaceRestTab.add("panel", undefined, undefined, {name
 var GFPGAN_strength = FaceRestStrengthPanel.add("slider", undefined, undefined, undefined, undefined, {name: "GFPGAN_strength"}); 
     GFPGAN_strength.minvalue = 0; 
     GFPGAN_strength.maxvalue = 100; 
-    GFPGAN_strength.value = 75; 
+    GFPGAN_strength.value = 50; 
     GFPGAN_strength.preferredSize.width = 367; 
     GFPGAN_strength.alignment = ["left","fill"]; 
 
@@ -148,17 +204,33 @@ var percentsign1 = FaceRestStrengthPanel.add("statictext", undefined, undefined,
     percentsign1.text = "%"; 
     percentsign1.alignment = ["left","fill"]; 
 
-// SAVEORIGTAB
-// ===========
-var SaveOrigTab = tpanel1.add("tab", undefined, undefined, {name: "SaveOrigTab"}); 
-    SaveOrigTab.text = "Save Original"; 
-    SaveOrigTab.orientation = "column"; 
-    SaveOrigTab.alignChildren = ["left","top"]; 
-    SaveOrigTab.spacing = 10; 
-    SaveOrigTab.margins = 10; 
+// MISCTAB
+// =======
+var MiscTab = tpanel1.add("tab", undefined, undefined, {name: "MiscTab"}); 
+    MiscTab.text = "Misc"; 
+    MiscTab.orientation = "column"; 
+    MiscTab.alignChildren = ["left","top"]; 
+    MiscTab.spacing = 10; 
+    MiscTab.margins = 10; 
 
-var Save_Original = SaveOrigTab.add("checkbox", undefined, undefined, {name: "Save_Original"}); 
-    Save_Original.text = "Enable"; 
+var Save_Original = MiscTab.add("checkbox", undefined, undefined, {name: "Save_Original"}); 
+    Save_Original.text = "Save Original"; 
+
+var Seamless = MiscTab.add("checkbox", undefined, undefined, {name: "Seamless"}); 
+    Seamless.text = "Seamless"; 
+
+// SAMPLERPANEL
+// ============
+var SamplerPanel = MiscTab.add("panel", undefined, undefined, {name: "SamplerPanel"}); 
+    SamplerPanel.text = "Sampler"; 
+    SamplerPanel.orientation = "column"; 
+    SamplerPanel.alignChildren = ["left","top"]; 
+    SamplerPanel.spacing = 10; 
+    SamplerPanel.margins = 10; 
+
+var SamplerMenu_array = ["ddim","k_dpm_2_a","k_dpm_2","k_euler_a","k_euler","k_heun","k_lms","plms"]; 
+var SamplerMenu = SamplerPanel.add("dropdownlist", undefined, undefined, {name: "SamplerMenu", items: SamplerMenu_array}); 
+    SamplerMenu.selection = 6; 
 
 // SEEDTAB
 // =======
@@ -171,7 +243,7 @@ var SeedTab = tpanel1.add("tab", undefined, undefined, {name: "SeedTab"});
 
 // TPANEL1
 // =======
-tpanel1.selection = UpscalingTab; 
+tpanel1.selection = outputLocationTab; 
 
 // SEEDPANEL
 // =========
@@ -207,45 +279,47 @@ var RecentSeeds = RecentSeedPanel.add("dropdownlist", undefined, undefined, {nam
 // EXPORTPANEL
 // ===========
 var ExportPanel = OutputTab.add("panel", undefined, undefined, {name: "ExportPanel"}); 
-    ExportPanel.text = "Panel"; 
+    ExportPanel.text = "Export"; 
     ExportPanel.orientation = "row"; 
-    ExportPanel.alignChildren = ["left","top"]; 
+    ExportPanel.alignChildren = ["right","center"]; 
     ExportPanel.spacing = 10; 
     ExportPanel.margins = 10; 
-    ExportPanel.alignment = ["fill","top"]; 
+    ExportPanel.alignment = ["right","top"]; 
 
 var ExplanationText = ExportPanel.add("group", undefined , {name: "ExplanationText"}); 
     ExplanationText.getText = function() { var t=[]; for ( var n=0; n<ExplanationText.children.length; n++ ) { var text = ExplanationText.children[n].text || ''; if ( text === '' ) text = ' '; t.push( text ); } return t.join('\n'); }; 
-    ExplanationText.preferredSize.width = 307; 
     ExplanationText.orientation = "column"; 
     ExplanationText.alignChildren = ["left","center"]; 
     ExplanationText.spacing = 0; 
-    ExplanationText.alignment = ["left","fill"]; 
+    ExplanationText.alignment = ["right","fill"]; 
 
     ExplanationText.add("statictext", undefined, "Export the active/selected composition to the"); 
-    ExplanationText.add("statictext", undefined, "specified location, as well as a batch file to pass"); 
-    ExplanationText.add("statictext", undefined, "to the dream.py command which will include"); 
-    ExplanationText.add("statictext", undefined, "your keyframed strength and scale values."); 
-    ExplanationText.preferredSize.width = 307; 
+    ExplanationText.add("statictext", undefined, "specified location, as well as a batch file to"); 
+    ExplanationText.add("statictext", undefined, "pass to the dream.py command which will"); 
+    ExplanationText.add("statictext", undefined, "include your keyframed strength and scale"); 
+    ExplanationText.add("statictext", undefined, "values."); 
 
-// EXPORTBUTTONSPANEL
+// EXPORTBUTTONSGROUP
 // ==================
-var ExportButtonsPanel = ExportPanel.add("panel", undefined, undefined, {name: "ExportButtonsPanel"}); 
-    ExportButtonsPanel.text = "Export"; 
-    ExportButtonsPanel.orientation = "column"; 
-    ExportButtonsPanel.alignChildren = ["left","top"]; 
-    ExportButtonsPanel.spacing = 10; 
-    ExportButtonsPanel.margins = 10; 
+var exportButtonsGroup = ExportPanel.add("group", undefined, {name: "exportButtonsGroup"}); 
+    exportButtonsGroup.orientation = "column"; 
+    exportButtonsGroup.alignChildren = ["center","center"]; 
+    exportButtonsGroup.spacing = 10; 
+    exportButtonsGroup.margins = 0; 
 
-var ExportCurrentFrame = ExportButtonsPanel.add("button", undefined, undefined, {name: "ExportCurrentFrame"}); 
+var ExportCurrentFrame = exportButtonsGroup.add("button", undefined, undefined, {name: "ExportCurrentFrame"}); 
     ExportCurrentFrame.helpTip = "Export only the current frame.\nTo test settings or to generate a still image."; 
     ExportCurrentFrame.text = "Current Frame"; 
-    ExportCurrentFrame.alignment = ["fill","top"]; 
+    ExportCurrentFrame.alignment = ["fill","center"]; 
 
-var ExportSequence = ExportButtonsPanel.add("button", undefined, undefined, {name: "ExportSequence"}); 
+var ExportSequence = exportButtonsGroup.add("button", undefined, undefined, {name: "ExportSequence"}); 
     ExportSequence.helpTip = "Export the entire sequence."; 
     ExportSequence.text = "Sequence"; 
-    ExportSequence.alignment = ["fill","top"]; 
+    ExportSequence.alignment = ["fill","center"]; 
+
+var StartRenderCheckbox = exportButtonsGroup.add("checkbox", undefined, undefined, {name: "StartRenderCheckbox"}); 
+    StartRenderCheckbox.text = "Start Render"; 
+    StartRenderCheckbox.value = true; 
 
 // SETUPTAB
 // ========
@@ -284,27 +358,52 @@ var PromptLayerManage = SetupTab.add("panel", undefined, undefined, {name: "Prom
     PromptLayerManage.margins = 10; 
 
 var AddPrompt = PromptLayerManage.add("button", undefined, undefined, {name: "AddPrompt"}); 
-    AddPrompt.text = "+ Prompt TXT"; 
+    AddPrompt.text = "+ Prompt Layer"; 
     AddPrompt.alignment = ["fill","top"]; 
 
 var ReorderPrompts = PromptLayerManage.add("button", undefined, undefined, {name: "ReorderPrompts"}); 
     ReorderPrompts.text = "Reorder Prompt Layers"; 
     ReorderPrompts.alignment = ["fill","top"]; 
 
-var HideShowPromptLayers = PromptLayerManage.add("button", undefined, undefined, {name: "HideShowPromptLayers"}); 
-    HideShowPromptLayers.text = "Hide/Show Prompt Layers"; 
-    HideShowPromptLayers.alignment = ["fill","top"]; 
+// PROMPTLAYERVISIBILITY
+// =====================
+var PromptLayerVisibility = PromptLayerManage.add("panel", undefined, undefined, {name: "PromptLayerVisibility"}); 
+    PromptLayerVisibility.text = "Prompt Layer Visibility"; 
+    PromptLayerVisibility.orientation = "column"; 
+    PromptLayerVisibility.alignChildren = ["left","top"]; 
+    PromptLayerVisibility.spacing = 10; 
+    PromptLayerVisibility.margins = 10; 
+
+var ShowPromptLayers = PromptLayerVisibility.add("button", undefined, undefined, {name: "ShowPromptLayers"}); 
+    ShowPromptLayers.text = "Show"; 
+    ShowPromptLayers.alignment = ["fill","top"]; 
+
+var HidePromptLayers = PromptLayerVisibility.add("button", undefined, undefined, {name: "HidePromptLayers"}); 
+    HidePromptLayers.text = "Hide"; 
+    HidePromptLayers.alignment = ["fill","top"]; 
+
+// SETUPTAB
+// ========
+var MakeExplainComp = SetupTab.add("button", undefined, undefined, {name: "MakeExplainComp"}); 
+    MakeExplainComp.text = "Make Explain Comp"; 
 
 
 
 
 //layout over - now for the functions and logic
+
+specifiedImagePath.hide();
+var showPaths = examplePaths();
+samplePaths.text = showPaths;
+
+
 //set output location
 
 //items path: ExportToStableDiffusion.mainPanel.OutputTab.OutputLocationPanel
 BrowseButton.onClick = function() {
     var outputFolder = Folder.selectDialog("Choose output folder:");
     OutputLocation.text = outputFolder.fsName;
+    samplePaths.text = examplePaths();  
 }
 
 
@@ -357,18 +456,32 @@ function exportImageSequence(singleFrame) {
         var PromptLayers = new Array();
         var orderedPromptLayers = new Array();
         var PromptLayers = getESD_prompt_text_layers(comp.layers);
-        Hide_prompt_text_layers(PromptLayers);
-
-        var ImageStrength = getImage_strength_layer(comp.layers);
+        
+        //var ImageStrength = getML_settings_layer(comp.layers);
         
 
         // Now we have a multidimensional array that looks like
-        // 0: 1, ESD_prompt_03,next to a ball\n,0.33, 1
-        // 1: 2, ESD_prompt_02,on the beach,0.33, 2
-        //the first item in each array is the comp layer number of that ESD_prompt. The last item is the comp layer number after reordering
+        // 0: 1, ESD_prompt_03,next to a ball\n,0.33, 1, true
+        // 1: 2, ESD_prompt_02,on the beach,0.33, 2, true
+        //the first item in each array is the comp layer number of that ESD_prompt. 
+        //The 4th item is the comp layer number after reordering. 5th is whether the layer is activeAtTime
+
+        var promptLayersWarning = "none";
 
         if (PromptLayers.length < 1) {
-            alert("No prompt text found in composition.");
+            promptLayersWarning = "No prompt text layers found in composition.";
+        } else { //There are prompt text layers but are there any that are visible?
+            for (var m=0; m<PromptLayers.length; m++) {
+                if (PromptLayers[m][5]) {
+                    promptLayersWarning = "none";
+                } else {
+                    promptLayersWarning = "No *visible* prompt text layers in composition.";
+                }
+            }
+        }
+
+        if (promptLayersWarning != "none") {
+            alert(promptLayersWarning);
         } else {
             orderedPromptLayers = reorderESD_prompt_text_layers(PromptLayers); //reorder the PromptLayers
         }
@@ -407,17 +520,31 @@ function exportImageSequence(singleFrame) {
             var prompts_string="";
             app.project.activeItem.time = i*app.project.activeItem.frameDuration;
             var PromptLayers = getESD_prompt_text_layers(comp.layers);
+            var currentMLSettings = getML_settings_layer(comp.layers);
             for (var j=0; j < PromptLayers.length; j++) {
-                prompts_string = prompts_string + PromptLayers[j][2];
-                prompts_string = prompts_string + ":" + PromptLayers[j][3].toFixed(2) + " ";                 
+                if (PromptLayers[j][5]) { //Layer is active at this time
+                    prompts_string = prompts_string + PromptLayers[j][2];                           //prompt text
+                    prompts_string = prompts_string + ":" + PromptLayers[j][3].toFixed(2) + " ";    //prompt weight                   
+                }
+
             }
+            var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + i).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
+
             //this should work! ah well            var testPad = 'argh'.padStart(10,"0"); 
-            //writeLine = prompts_string + "-I " + f.toString() + "/" + comp.name + "_" + i.toString().padStart(5,'0') + ".png";
+            //writeLine = prompts_string + "-I \"" + f.toString() + "/" + comp.name + "_" + i.toString().padStart(5,'0') + ".png\"";
 
 
 
-            writeLine = prompts_string + "-I " + comp.name + "_" + ("00000" + i).slice(-5) + ".png"; //will change this to use padStart once I can get that working.
-            writeLine += " --strength=" + ImageStrength.toFixed(2);
+            writeLine = prompts_string;
+            
+
+
+            // writeLine += " -I \"" + comp.name + "_" + ("00000" + i).slice(-5) + ".png\""; //will change this to use padStart once I can get that working.
+            writeLine += " -I \"" + fileAndPath + "\""; 
+
+            writeLine += " --strength=" + Number(currentMLSettings[0]).toFixed(2);
+            writeLine += " --cfg_scale=" + Number(currentMLSettings[1]).toFixed(2);
+            writeLine += " --steps=" + Math.floor(Number(currentMLSettings[2]));
 
             if (ESRGAN_enable.value == true) {
                 writeLine += " -U " + (Upscale2x.enabled ? 2 : 4) + " " + ESRGAN_StrengthText.text;
@@ -431,6 +558,10 @@ function exportImageSequence(singleFrame) {
 
             writeLine += Save_Original.value ? " --save_orig" : "";
 
+            writeLine += Seamless.value ? " --seamless" : "";
+
+            writeLine += " --sampler " + SamplerMenu.selection.text;
+
             writeLine = writeLine.replace(/ +/g, ' '); //replaces multiple spaces with a single space just to sanitize
 
 
@@ -441,6 +572,10 @@ function exportImageSequence(singleFrame) {
         ESDBatchFile.close();
         //reset comp playhead to original 
         app.project.activeItem.time = origWorkStartFrame * app.project.activeItem.frameDuration;
+
+        //Hide prompt layers
+        var PromptLayers = getESD_prompt_text_layers(comp.layers);
+        Hide_prompt_text_layers(PromptLayers);
 
 
         var queued = app.project.renderQueue.items.add(comp);
@@ -457,8 +592,12 @@ function exportImageSequence(singleFrame) {
         module.file = File(f.toString()+"/"+comp.name+"_[#####].png");
 
 
+        if (StartRenderCheckbox.value) {
+            app.project.renderQueue.render();
+        }
 
-        // app.project.renderQueue.render();
+        comp.openInViewer();
+        Show_prompt_text_layers(PromptLayers);
     }
 }
 
@@ -572,9 +711,10 @@ function getESD_prompt_text_layers(CompLayers) {
                                             CompLayers[i].name, 
                                             prompt_text, 
                                             CompLayers[i].effect("prompt_strength").property(1).valueAtTime(currentTime, true),
-                                            i); //added this last element to represent the actual layer number for this element in the comp
-                                            // we'll change this as we re-order this list to represent where to find each layer within the comp
-                                            // for when we re-order the actual layers.
+                                            i,
+                                            CompLayers[i].activeAtTime(currentTime)
+                                            );  //added 4th element to represent the actual layer number for this element in the comp
+                                                //added 5th elemen t to store whether the layer is active at the current time
             // ESDPromptLayers[j] = CompLayers[i];
             j++;
         }
@@ -582,22 +722,36 @@ function getESD_prompt_text_layers(CompLayers) {
     return ESDPromptLayers;
 }
 
-function getImage_strength_layer(CompLayers) {
+function getML_settings_layer(CompLayers) {
     var num_layers = CompLayers.length;
+    var CFG_Scale = 300;      //setting it out of range so we can test later that it's been reset to a value read from the layer
+    var Steps = 300;          //setting it out of range so we can test later that it's been reset to a value read from the layer
     var Image_strength = 300; //setting it out of range so we can test later that it's been reset to a value read from the layer
+    // var ML_settings = new Array();
     var j=0;
     var currentTime = app.project.activeItem.time;
     for (var i=1; i<=num_layers; i++){
-        if ( /^ML_strength.+/.test(CompLayers[i].name) ) { //find the layers whose name starts with ESD_prompt, those are ours
-            Image_strength = CompLayers[i].property(2).property(1).value.text;
-            break; //there should be only one ML_strength layer, so might as well stop iterating through layers once we've found it
+        if ( /^ML_setting.+/.test(CompLayers[i].name) ) { //find the layer whose name starts with ML_settings
+            Image_strength = CompLayers[i].property("Effects").property("Image_Strength").property("Slider").valueAtTime(currentTime, true);
+            CFG_Scale = CompLayers[i].property("Effects").property("cfg_scale").property("Slider").valueAtTime(currentTime, true);
+            Steps = CompLayers[i].property("Effects").property("steps").property("Slider").valueAtTime(currentTime, true);
+            break; //there should be only one ML_settings layer, so might as well stop iterating through layers once we've found it
             j++;
         }
     }
-    if (Image_strength == 300) {
-        Image_strength = 0.75;
-    }
-    return Image_strength;
+
+    (Image_strength == 300) ? 0.75 : Image_strength;
+    (CFG_Scale == 300) ? 7.50 : CFG_Scale;
+    (Steps == 300) ? 50 : Steps;
+
+    ML_settings = [Image_strength, CFG_Scale, Steps];
+
+    // if (Image_strength == 300) {
+    //     Image_strength = 0.75;
+    // }
+
+    // return Image_strength;
+    return ML_settings;
 }
 
 function generateSeed() {
@@ -638,9 +792,82 @@ ExportCurrentFrame.onClick = function() {
 
 SeedGenerate.onClick = function() { generateSeed(); };
 
+ShowPromptLayers.onClick = function() {
+var PromptLayers = getESD_prompt_text_layers(app.project.activeItem.layers);
+Show_prompt_text_layers(PromptLayers);
+};
 
+HidePromptLayers.onClick = function() {
+    var PromptLayers = getESD_prompt_text_layers(app.project.activeItem.layers);
+    Hide_prompt_text_layers(PromptLayers);
+};
 
+ReorderPrompts.onClick= function() {
+    var PromptLayers = getESD_prompt_text_layers(app.project.activeItem.layers);
+    reorderESD_prompt_text_layers(PromptLayers);
+};
 
+function examplePaths() {
+    var comp = app.project.activeItem;
+    var examplePath="";
 
+    if (OutputLocation.text == "Output Location") {
+        return ("Please set an output location.");
+    }
+
+    for (var i=1; i < 3; i++) {
+        var f = new Folder(OutputLocation.text+"/"+comp.name);
+        // examplePath += f.toString() + "/" + comp.name + "_" + ("00000" + i).slice(-5) + ".png\n";
+        examplePath += fileWithPath(f.toString(),comp.name + "_" + ("00000" + i).slice(-5) + ".png\n");
+    }
+    return examplePath;
+}
+
+function fileWithPath(filepath, filename) {
+    if (includeImagePathButton.value) {
+        return (filepath + "/" + filename);
+    }
+    if (omitImagePathButton.value) {
+        return (filename);
+    }
+    if (specifiedImagePathButton.value) {
+
+        var imageDir = filepath.match(/.+\/(.+)\/?/); //This is meant to return the assigned image folder created during export
+
+        if (specifiedImagePath.text.indexOf("\:") > -1) { //If the path contains a colon, we're considering it to be a Windows path
+            separator = "\\"; //it's a windows path, separators are backslashes
+        } else {
+            separator = "\/"; //it's not windows, separators are forward-slashes
+        }
+        return(specifiedImagePath.text.replace(/'\\'/g, '\\\\') + imageDir[1] + separator + filename);
+    }
+}
+
+includeImagePathButton.onClick = function() {
+    specifiedImagePath.hide();
+    var showPaths = examplePaths();
+    samplePaths.text = showPaths;
+}
+
+omitImagePathButton.onClick = function() {
+    specifiedImagePath.hide();
+    samplePaths.text = examplePaths();  
+}
+
+specifiedImagePathButton.onClick = function() {
+    specifiedImagePath.show();
+    samplePaths.text = examplePaths();  
+}
+
+specifiedImagePath.onChanging = function() {
+    samplePaths.text = examplePaths();  
+}
+
+OutputLocation.onChanging = function() {
+    samplePaths.text = examplePaths();  
+}
+specifiedImagePath.onChanging = function() {
+    samplePaths.text = examplePaths();  
+}
 
 ExportToStableDiffusion.show();
