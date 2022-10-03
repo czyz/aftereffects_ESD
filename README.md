@@ -32,9 +32,9 @@ This After Effects plugin aims to turn Adobe After Effects into a versatile tool
 
 # **Why?**
 
-Widespread access to quality text-to-image and image-to-image machine learning models is a new phenomenon, and it's difficult to predict what kinds of inputs we'll all be passing to the model in a year or two. Versatile tools serving as middleware to feed prompts and images to the machine learning models are great for exploration. This plugin is meant to aid in the use of these tools for the exploration of the use of image and prompt batch sequences for animation or even single-image setting exploration. 
+Widespread access to quality text-to-image and image-to-image machine learning models is a new phenomenon, and it's difficult to predict what kinds of inputs we'll all be passing to the model in a year or two. Versatile tools serving as middleware to feed prompts and images to the machine learning models are great for exploration. 
 
-After Effects is a compositing application that can both export PNG sequences for Stable Diffusion's img_2_img function, and also features a **very** extensive toolset for keyframing changes in values over time and/or scripting values in Javascript. So Adobe's application provides the user-friendly tools, and this script is meant to add functions that help patch its output into InvokeAI, which then feeds that output to Stable Diffusion. 
+After Effects is a compositing application that can export PNG sequences and also features a **very** extensive toolset for keyframing changes in values over time and/or scripting values in Javascript. This plugin is meant to add functions that help patch the output of After Effect's user-friendly tools into InvokeAI, which then feeds commands to Stable Diffusion. Ultimately the plugin is meant to aid in the use of InvokeAI for the exploration of the use of image and prompt batch sequences for animation or even single-image settings exploration. 
 
 Here's an incomplete list of ideas to which this script might be of use:
 
