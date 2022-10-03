@@ -51,7 +51,6 @@ Here's an incomplete list of ideas to which this script might be of use:
 <div style="float: right;margin-left:1em">
 <img src="docs/images/templates_outputmodule2.jpg" /><br>
 <img src="docs/images/Load_output_module3.jpg" /><br>
-<img src="docs/images/install_script.jpg" />
 </div>
 
 - This script depends on a specifically-named PNG Sequence output module, which can be found in "additional_files/PNG sequence output modules.aom". To install this output module:
@@ -60,6 +59,11 @@ Here's an incomplete list of ideas to which this script might be of use:
   - Navigate to select the aforementioned output module file, and hit the 'Open' button.
 
 <br>
+
+
+<div style="float: right;margin-left:1em; margin-top: 2em">
+<img src="docs/images/install_script.jpg" />
+</div>
 
 - Install the script (optional)<br>
   - In After Effects's menubar, click 'File > Scripts > Install Script File...'. Navigate to and select the script 'export_for_stable_diffusion.jsx', click the 'Select' button, and next time you launch After Effects the script will be easily accessible in the 'File > Scripts' menu.<br>
@@ -263,3 +267,5 @@ for i in $(ls *.png); do
 - Right-click the image sequence in After Effects and choose "Interpret Footage > Main" from the popup contextual menu. 
 - Change the value in the "Assume this frame rate" field to the correct frame rate.
 - Hit the "OK" button.
+
+If you'd like to change the default frame rate that After Effects assumes when it imports image sequences, you can change that setting in "Preferences > Import > Sequence Footage".
