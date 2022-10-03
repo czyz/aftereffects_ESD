@@ -228,7 +228,7 @@ Special thanks to Lincoln D. Stein for making the InvokeAI script and making it 
 
 # ToDo
 
-- Support the creation of alpha matte image sequences alongside the main image sequence, and prompt files that reference these matte sequences, for use with img_2_img inpainting.
+- Support the creation of alpha matte image sequences alongside the main image sequence, and prompt files that reference these matte sequences, for use with img_2_img inpainting.<sup>[5](#myfootnote5)</sup>
 - Fast automated generation of "current frame" results, for quick and seamless iterating.
 - Detect Composition resolutions that are incompatible with Stable Diffusion (i.e. don't have dimensions divisible by 48). Suggest compatible resolutions, possibly including suggestions based on available VRAM(?)
 - Allow the user to specify the seed value as a slider Effect control within the "ML_Settings" layer, and use that if it exists (to allow users to use more than a single static seed value if desired)
@@ -269,3 +269,15 @@ for i in $(ls *.png); do
 - Hit the "OK" button.
 
 If you'd like to change the default frame rate that After Effects assumes when it imports image sequences, you can change that setting in "Preferences > Import > Sequence Footage".
+
+<div style="float: right;margin-left:1em">
+<img src="docs/images/ESD_apply_mask.jpg"/>
+</div>
+
+<a name="myfootnote4">5</a> &nbsp; Proposed method: User would create a hidden layer in the project named "ESD_mask". This layer would serve as the alpha channel for the project. Typically the user might create this layer by duplicating and then selecting the source footage in their composition and doing a command-shift-C (or ctrl-shift-C on Windows) to nest tha footage within a composition within the composition. Then they could open up that nested comp and work within it to mask or otherwise create areas of alpha for inpainting. 
+
+Upon export, if an ESD_mask layer exists, and the user has checked the "matte sequence" checkbox, the script would do the normal export, then (if it was not already present) would add an adjustment layer called "ESD_apply_mask" above the source footage. On this adjustment layer would be a "Set Channels" effect, with "Set Alpha" set to use the ESD_mask layer for alpha, with "Effects & Masks" accounted for. 
+
+This would make it simple to turn the alpha on and off so that when it came time to do the PNG export, the script would render out an image sequence with 'matte' in the name, with the adjustment layer enabled. Then it would render out the normal image sequence with the normal naming scheme with the adjustment layer disabled. 
+
+Unfortunately After Effects doesn't seem to export alpha in the manner needed for Stable Diffusion, so more exploration needs to be done. Or maybe Stable Diffusion can be altered to accept standard grayscale matte sequences rather than requiring image sequences with an alpha channel that includes color information even for fully transparent pixels.s
