@@ -93,9 +93,9 @@ A simple composition with one prompt and an animated Image_Strength value.
 
 3. Run the export_for_stable_diffusion.jsx script to bring up the UI.
 
-4. Click the "+ML_Settings Layer" button to add a layer with controls for Image_Strength, cfg_scale, and steps. The controls are all sliders that can be found in the 'Effects' controls for that new layer.
+4. Click the "+ML_Settings Layer" button to add a layer with controls for Image_Strength, cfg_scale, and steps. The controls are all sliders that can be found in the 'Effects' controls for that new layer. For the accepted ranges of these values, please see the InvokeAI documentation.
 
-5. Click the "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit.
+5. Click the "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit. The prompt_strength value can be set (use values from 0 to 1) via the control in the Effects section of each prompt text layer.
 
 6. Hit the esc key to get out of the modal plugin window<sup id="a1">[1](#myfootnote1)</sup> so that you can go keyframe and edit your prompt text, weights, and other settings in the Timeline. 
 
