@@ -833,7 +833,6 @@ function exportImageSequence(singleFrame) {
     } else {
 
         var comp = app.project.activeItem;
-        // alert(app.project.activeItem.time);
 
         var current_frame = app.project.activeItem.time / app.project.activeItem.frameDuration;
         var origWorkStartFrame = app.project.activeItem.workAreaStart / app.project.activeItem.frameDuration;
@@ -842,21 +841,18 @@ function exportImageSequence(singleFrame) {
 
 //set the comp duration to start and end on the current frame if we're exporting a single frame
         if (!singleFrame) {
-            //alert("doing multiple frames.");
+            //exporting multiple frames.
             workStartFrame = origWorkStartFrame;
             workDurationFrames = origWorkDurationFrames;
         } else {
-            //alert("doing single frames.");
+            //exporting single frames.
             workStartFrame = current_frame;
             workDurationFrames = 1;
         }
                 
         var PromptLayers = new Array();
         var orderedPromptLayers = new Array();
-        var PromptLayers = getESD_prompt_text_layers(comp.layers);
-        
-        //var ImageStrength = getML_settings_layer(comp.layers);
-        
+        var PromptLayers = getESD_prompt_text_layers(comp.layers);        
 
         // Now we have a multidimensional array that looks like
         // 0: 1, ESD_prompt_03,next to a ball\n,0.33, 1, true
@@ -934,15 +930,10 @@ function exportImageSequence(singleFrame) {
             }
             var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + i).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
 
-            //this should work! ah well            var testPad = 'argh'.padStart(10,"0"); 
-            //writeLine = prompts_string + "-I \"" + f.toString() + "/" + comp.name + "_" + i.toString().padStart(5,'0') + ".png\"";
-
-
+            //padStart isn't supported by Extendscript, ah well. So this doesn't work, hence the slice hack above            var testPad = 'argh'.padStart(10,"0"); 
 
             writeLine = prompts_string;
             
-
-
             // writeLine += " -I \"" + comp.name + "_" + ("00000" + i).slice(-5) + ".png\""; //will change this to use padStart once I can get that working.
             writeLine += " -I \"" + decodeURI(fileAndPath) + "\""; 
 
