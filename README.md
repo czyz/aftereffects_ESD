@@ -48,22 +48,19 @@ Here's an incomplete list of ideas to which this script might be of use:
 
 # **Installation**
 
-<div style="float: right;margin-left:1em">
-<img src="docs/images/templates_outputmodule2.jpg" /><br>
-<img src="docs/images/Load_output_module3.jpg" /><br>
-</div>
+<!-- <div style="float: right;margin-left:1em"> -->
+<!-- no more divs, switching to old-school deprecated html to do these right-aligned images with text wrap. -->
+<img align="right" hspace=10 src="docs/images/templates_outputmodule2.jpg" />
 
 - This script depends on a specifically-named PNG Sequence output module, which can be found in "additional_files/PNG sequence output modules.aom". To install this output module:
+<br clear=all><img align="right" hspace=10  src="docs/images/Load_output_module3.jpg" />
   - Open After Effects's Output Modules window by clicking the menubar menu: Edit > Templates > Output Modules.<br> 
   - At the lower-left corner of that window is a 'Save All...' button, and next to that is a 'Load...' button. Click 'Load...'.<br>
   - Navigate to select the aforementioned output module file, and hit the 'Open' button.
 
 <br>
 
-
-<div style="float: right;margin-left:1em; margin-top: 2em">
-<img src="docs/images/install_script.jpg" />
-</div>
+<img align="right" hspace="10" src="docs/images/install_script.jpg" />
 
 - Install the script (optional)<br>
   - In After Effects's menubar, click 'File > Scripts > Install Script File...'. Navigate to and select the script 'export_for_stable_diffusion.jsx', click the 'Select' button, and next time you launch After Effects the script will be easily accessible in the 'File > Scripts' menu.<br>
@@ -80,10 +77,8 @@ A simple composition with one prompt and an animated Image_Strength value.
 </p>
 <br clear=all>
 
-<div style="float: right;margin-left:1em">
-<img src="docs/images/4.jpg" /><br>
-<img src="docs/images/6.jpg" /><br>
-</div>
+<!-- <div style="float: right;margin-left:1em"> -->
+<img align="right" hspace="5" src="docs/images/4.jpg" />
 
 <!-- footnote method borrowed from https://stackoverflow.com/a/32119820/20037038 -->
 ## Set up Composition
@@ -95,9 +90,13 @@ A simple composition with one prompt and an animated Image_Strength value.
 
 4. Click the "+ML_Settings Layer" button to add a layer with controls for Image_Strength, cfg_scale, and steps. The controls are all sliders that can be found in the 'Effects' controls for that new layer. For the accepted ranges of these values, please see the InvokeAI documentation.
 
+<br clear=all><img align="right" hspace="5" src="docs/images/6.jpg" />
+
 5. Click the "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit. The prompt_strength value can be set (use values from 0 to 1) via the control in the Effects section of each prompt text layer.
 
 6. Hit the esc key to get out of the modal plugin window<sup id="a2">[2](#myfootnote2)</sup> so that you can go keyframe and edit your prompt text, weights, and other settings in the Timeline. 
+
+
 
 ## Export Image Sequence and Prompt File
 7. After the timeline is just how you like it, run the script again. Go to the UI's output tab.
@@ -283,10 +282,7 @@ for i in $(ls *.png); do
 
 If you'd like to change the default frame rate that After Effects assumes when it imports image sequences, you can change that setting in "Preferences > Import > Sequence Footage".[↩](#a5)
 
-<div style="float: right;margin-left:1em">
-<img src="docs/images/ESD_apply_mask.jpg"/>
-</div>
-
+<img align="right" hspace="10" src="docs/images/ESD_apply_mask.jpg"/>
 
 <b id="myfootnote6">6</b> &nbsp; Lines in the generated prompt file will be much longer than this example because they will include not only the prompts but also the path and filename of the images, the Image_strength value, scaling values, etc.[↩](#a6)
 
