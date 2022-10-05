@@ -225,7 +225,7 @@ If you make anything cool with this script. please send me a link, I'd love to s
 <br>
 
 # Thanks
-Special thanks to Lincoln D. Stein for making the InvokeAI script and making it easier for us muggles (speaking for myself) to manage to install and run local instances of Stable Diffusion on macOS, Windows, and Linux –and with an easy to use interactive prompt. Thanks to all the contributors of that project for adding features and making it hum. Thanks to Stability AI for taking an inevitable step that appeared to many to be wildly irresponsible and unleashing an open-source machine-learning model of this quality on the world.
+Special thanks to Lincoln D. Stein for making the InvokeAI script and making it easier for us muggles (speaking for myself) to manage to install and run local instances of Stable Diffusion on macOS, Windows, and Linux –and with an easy to use interactive prompt. Thanks to all the contributors of that project for adding features and making it hum. Thanks to Stability AI for taking an inevitable and possibly wildly-irresponsible step in unleashing an open-source machine-learning model of Stable Diffusion's quality on the world.
 
 <br>
 
