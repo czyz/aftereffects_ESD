@@ -293,5 +293,5 @@ Upon export, if an ESD_mask layer exists, and the user has checked the "matte se
 
 This would make it simple to turn the alpha on and off so that when it came time to do the PNG export, the script would render out an image sequence with 'matte' in the name, with the adjustment layer enabled. Then it would render out the normal image sequence with the normal naming scheme with the adjustment layer disabled. 
 
-Unfortunately After Effects doesn't seem to export alpha in the manner needed for Stable Diffusion, so more exploration needs to be done. Or maybe Stable Diffusion can be altered to accept standard grayscale matte sequences rather than requiring image sequences with an alpha channel that includes color information even for fully transparent pixels.[↩](#a7)
+Unfortunately After Effects doesn't seem to export alpha in the manner needed for Stable Diffusion, so more exploration needs to be done. Or maybe Stable Diffusion can be altered to accept standard grayscale matte sequences rather than requiring image sequences with an alpha channel that includes color information even for fully transparent pixels.[↩](#a7)test
 
