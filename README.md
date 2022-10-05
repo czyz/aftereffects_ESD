@@ -173,7 +173,7 @@ That's a nice simple-sounding example<sup id="a6">[6](#myfootnote6)</sup>, and o
 <img src="docs/images/Unicorn_result2.jpg"/>
 </p>
 
-*a keen observer may note that the prompt weights on this frame don't add up to 100%. Normalization of prompt weights at each frame would be an easy thing to add –however this isn't immediately necessary as this feature already exists within InvokeAI. These weights were normalized, it just happened outside of After Effects.*
+*a keen observer may note that the prompt weights on this frame don't add up to 100%. Normalization of prompt weights at each frame would be an easy thing to add –however this isn't immediately necessary as this feature already exists within InvokeAI. These weights **were** normalized, it just happened outside of After Effects.*
 <p><br>
 
 <img align=right src="docs/images/show_and_tell4.jpg"/>
