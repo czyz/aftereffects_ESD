@@ -282,12 +282,12 @@ for i in $(ls *.png); do
 
 If you'd like to change the default frame rate that After Effects assumes when it imports image sequences, you can change that setting in "Preferences > Import > Sequence Footage".[↩](#a5)
 
-<img align="right" hspace="10" src="docs/images/ESD_apply_mask.jpg"/>
-
 <b id="myfootnote6">6</b> &nbsp; Lines in the generated prompt file will be much longer than this example because they will include not only the prompts but also the path and filename of the images, the Image_strength value, scaling values, etc.[↩](#a6)
 
 
 <b id="myfootnote7">7</b> &nbsp; Proposed method: User would create a hidden layer in the project named "ESD_mask". This layer would serve as the alpha channel for the project. Typically the user might create this layer by duplicating and then selecting the source footage in their composition and doing a command-shift-C (or ctrl-shift-C on Windows) to nest tha footage within a composition within the composition. Then they could open up that nested comp and work within it to mask or otherwise create areas of alpha for inpainting. 
+
+<img align="right" hspace="10" src="docs/images/ESD_apply_mask.jpg"/>
 
 Upon export, if an ESD_mask layer exists, and the user has checked the "matte sequence" checkbox, the script would do the normal export, then (if it was not already present) would add an adjustment layer called "ESD_apply_mask" above the source footage. On this adjustment layer would be a "Set Channels" effect, with "Set Alpha" set to use the ESD_mask layer for alpha, with "Effects & Masks" accounted for. 
 
