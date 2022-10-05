@@ -273,7 +273,7 @@ for i in $(ls *.png); do
   mv $i $(echo $i | sed -E 's/([^.]+)\.(.+)/\1.png/g'
   done
 ```
-[↩](#a4)
+[↩](#a4) 
 
 <b id="myfootnote5">5</b> &nbsp; If After Effects has assigned the image sequence the wrong frame rate:
 - Right-click the image sequence in After Effects and choose "Interpret Footage > Main" from the popup contextual menu. 
