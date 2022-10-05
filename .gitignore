@@ -31,3 +31,4 @@
 # ignore a couple more file
 .DS_Store
 SnpCreateDialog.jsx
+launch.json
