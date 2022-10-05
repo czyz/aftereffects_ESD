@@ -198,9 +198,11 @@ Select a Composition and an image sequence, hit the "Make show and tell comp" bu
 - Automatically saves user-specified settings and seed history
 - Clear user-specified settings and seed history
 
+<br>
+
 # Latest Changes
 
-- v1.00 (03 October 2022)
+- v1.00 (05 October 2022)
   - first release.
 
 <br>
