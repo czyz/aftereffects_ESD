@@ -1,12 +1,12 @@
-<h1 align='center'><b>Export to Stable Diffusion: a ScriptUI plugin for Adobe After Effects</b></h1>
+<h1 align='center'><b>Export to Stable Diffusion: a ScriptUI script for Adobe After Effects</b></h1>
 
-<!-- An Adobe After Effects ScriptUI plugin for generating both image sequences and prompt files for Stable Diffusion, using the InvokeAI "dream.py" script. -->
+<!-- An Adobe After Effects ScriptUI script for generating both image sequences and prompt files for Stable Diffusion, using the InvokeAI "dream.py" script. -->
 
 <p align="center">
 <img src="docs/images/2.jpg"/>
 </p>
 
-This After Effects plugin aims to turn Adobe After Effects into a versatile tool for creating image sequences and accompanying prompt batch files to be processed by [InvokeAI](https://github.com/invoke-ai/InvokeAI/blob/main/README.md)'s dream.py script. 
+This After Effects script aims to turn Adobe After Effects into a versatile tool for creating image sequences and accompanying prompt batch files to be processed by [InvokeAI](https://github.com/invoke-ai/InvokeAI/blob/main/README.md)'s dream.py script. 
 
 <br>
 
@@ -34,7 +34,7 @@ This After Effects plugin aims to turn Adobe After Effects into a versatile tool
 
 Widespread access to quality text-to-image and image-to-image machine learning models is a new phenomenon, and it's difficult to predict what kinds of inputs we'll all be passing to the model in a year or two. Versatile tools serving as middleware to feed prompts and images to the machine learning models are great for exploration. 
 
-After Effects is a compositing application that can export PNG sequences and also features a **very** extensive toolset for keyframing changes in values over time and/or scripting values in Javascript. This plugin is meant to add functions that help patch the output of After Effect's user-friendly tools into InvokeAI, which then feeds commands to Stable Diffusion. Ultimately the plugin is meant to aid in the use of InvokeAI for the exploration of the use of image and prompt batch sequences for animation or even single-image settings exploration. 
+After Effects is a compositing application that can export PNG sequences and also features a **very** extensive toolset for keyframing changes in values over time and/or scripting values in Javascript. This script is meant to add functions that help patch the output of After Effect's user-friendly tools into InvokeAI, which then feeds commands to Stable Diffusion. Ultimately the script is meant to aid in the use of InvokeAI for the exploration of the use of image and prompt batch sequences for animation or even single-image settings exploration. 
 
 Here's an incomplete list of ideas to which this script might be of use:
 
@@ -94,7 +94,7 @@ A simple composition with one prompt and an animated Image_Strength value.
 
 5. Click the "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit. The prompt_strength value can be set (use values from 0 to 1) via the control in the Effects section of each prompt text layer.
 
-6. Hit the esc key to get out of the modal plugin window<sup id="a2">[2](#myfootnote2)</sup> so that you can go keyframe and edit your prompt text, weights, and other settings in the Timeline. 
+6. Hit the esc key to get out of the modal script window<sup id="a2">[2](#myfootnote2)</sup> so that you can go keyframe and edit your prompt text, weights, and other settings in the Timeline. 
 
 
 
@@ -157,7 +157,7 @@ The Show and Tell Composition expressions have been written to expect the origin
 # **Key Features**
 
 ### Keyframeable Prompt Layers
-Using this plugin one can set up a composition with any number of prompt layers, and with the ability to keyframe the prompt strengths for each layer. For example 3 prompt layers could be keyframed over time such that the generated unicorn progressively becomes less "coated in glitter" and more "burnt to ash":
+Using this script one can set up a composition with any number of prompt layers, and with the ability to keyframe the prompt strengths for each layer. For example 3 prompt layers could be keyframed over time such that the generated unicorn progressively becomes less "coated in glitter" and more "burnt to ash":
 
 ```
 a rainbow unicorn:0.33 coated in glitter:0.62 burnt to ash:0.05
