@@ -1,4 +1,4 @@
-<h1 align='center'><b>Export to Stable Diffusion: a ScriptUI script for Adobe After Effects</b></h1>
+<h1 align='center'><b>Export to Stable Diffusion: a ScriptUI plugin for Adobe After Effects</b></h1>
 
 <!-- An Adobe After Effects ScriptUI script for generating both image sequences and prompt files for Stable Diffusion, using the InvokeAI "dream.py" script. -->
 
@@ -39,7 +39,7 @@ After Effects is a compositing application that can export PNG sequences and als
 Here's an incomplete list of ideas to which this script might be of use:
 
 - Tossing image sequences at the model just to see what comes back
-- Using video to puppeteer AI-generated characters (e.g. President Lincoln above)
+- Using video to puppeteer AI-generated characters (e.g. President Lincoln above - inspired by [this example](https://old.reddit.com/r/StableDiffusion/comments/wyeoqq/turning_img2img_into_vid2vid/))
 - Experimenting with one text prompt and a single still image as input, but keyframe a single variable to generate hundreds or thousands of variations while determining the best Image Strength, cfg_scale, or steps for generating a particular image
 - Generate image sequences of animated solid shapes or text to send to the model
 - Please experiment or speculate and add to this list.
@@ -120,7 +120,7 @@ Now you have an image sequence and a prompt file. If you chose your prompt optio
 11. Go to the command line at the point at which you usually run InvokeAI's dream.py script, but instead of entering the interactive prompt version, it can be run like so:
 
   ```
-  (ldm) ~/stable-diffusion$ python scripts/dream.py --full_precision --outdir "output_directory_location" --from_file "the_prompt_file_you_just_generated.txt"
+  (ldm) ~/stable-diffusion$ python scripts/dream.py --outdir "output_directory_location" --from_file "the_prompt_file_you_just_generated.txt"
   ```
 
 Sit back and watch as image after image is generated. 
