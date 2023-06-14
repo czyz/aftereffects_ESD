@@ -3,7 +3,7 @@
 <!-- An Adobe After Effects ScriptUI script for generating both image sequences and prompt files for Stable Diffusion, using the InvokeAI "dream.py" script. -->
 
 <p align="center">
-<img src="docs/images/2.jpg"/>
+<img src="docs/images/Panel_v2.jpg"/> <img src="docs/images/Export_v2.jpg">
 </p>
 
 This After Effects script aims to turn Adobe After Effects into a versatile tool for creating image sequences and accompanying prompt batch files to be processed by [InvokeAI](https://github.com/invoke-ai/InvokeAI/blob/main/README.md)'s dream.py script. 
@@ -48,6 +48,8 @@ Here's an incomplete list of ideas to which this script might be of use:
 
 # **Installation**
 
+- Rather than download each of these files individually, either click the "Code" button on this page and choose "Download Zip", or clone the repository to a local drive using "git clone https://github.com/czyz/aftereffects_ESD" or a command-line git tool. 
+
 <!-- <div style="float: right;margin-left:1em"> -->
 <!-- no more divs, switching to old-school deprecated html to do these right-aligned images with text wrap. -->
 <img align="right" hspace=10 src="docs/images/templates_outputmodule2.jpg" />
@@ -60,12 +62,15 @@ Here's an incomplete list of ideas to which this script might be of use:
 
 <br>
 
-<img align="right" hspace="10" src="docs/images/install_script.jpg" />
-
 - Install the scriptUI Panel and support files<br>
   - Copy "ESD Composition Setup.jsx" and the folder "Export_to_stable_diffusion" into:
-    - On macOS: "/Applications/Adobe After Effects (version e.g. 2023)/Scripts/ScriptUI Panels"
-    - On Windows: "Program Files\Adobe\Adobe After Effects (version e.g. 2023)\Support Files\Scripts\ScriptUI Panels
+
+    - On macOS:
+    "/Applications/Adobe After Effects (version e.g. 2023)/Scripts/ScriptUI Panels"
+
+    - On Windows: 
+    "Program Files\Adobe\Adobe After Effects (version e.g. 2023)\Support Files\Scripts\ScriptUI Panels"
+    
 - Restart or launch After Effects
 - In the menubar, click "Window > ESD Composition Setup.jsx" in order to launch the scriptUI panel. The first time it will launch as a window, but you can drag its gripper area and place the panel into the desired drop zone. 
 
@@ -79,7 +84,7 @@ A simple composition with one prompt and an animated Image_Strength value.
 <br clear=all>
 
 <!-- <div style="float: right;margin-left:1em"> -->
-<img align="right" hspace="5" src="docs/images/4.jpg" />
+<img align="right" hspace="5" src="docs/images/Panel_v2.jpg" />
 
 <!-- footnote method borrowed from https://stackoverflow.com/a/32119820/20037038 -->
 ## Set up Composition
@@ -91,9 +96,11 @@ Note: If your image contains alpha (for example if you've used After Effects mas
 
 3. Click the panel's "+ML_Settings Layer" button to add a layer with controls for Image_Strength, cfg_scale, and steps. The controls are all sliders that can be found in the 'Effects' controls for that new layer. For the accepted ranges of these values, please see the InvokeAI documentation.
 
-<br clear=all><img align="right" hspace="5" src="docs/images/6.jpg" />
+<br clear=all><img align="right" hspace="5" src="docs/images/6_v2.jpg" />
 
 4. Click the panel's "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit. The prompt_strength value can be set (use values from 0 to 1) via the control in the Effects section of each prompt text layer.
+
+Note: Prompts can call on [LoRA models](https://stable-diffusion-art.com/lora/). For example the prompt used to generate the ink and paint version of myself for the picture-in-picture in the walkthrough video was "withLora(Pencil_Sketch_by_vizsumit,0.6) person sketch".
 
 
 ## Export Image Sequence and Prompt File
@@ -115,13 +122,19 @@ The script will then do the following:
 Now you have an image sequence and a prompt file. If you chose your prompt options well, the images in that prompt file will have paths that lead Stable Diffusion to the images in your image sequence. 
 
 ## Use the Prompt File in InvokeAI
-11. Access InvokeAI's command line interface by selecting option (1) at its menu.  Alternatively, it can be launched directly from the command line by activating the InvokeAI environment and giving the command:
+11. Open up a cmd or powershell window (or Terminal on macOS) and switch into the InvokeAI directory. e.g.: 
 
 ```
-invokeai
+cd invokeai
 ```
 
-You should then be given an "invokeai>" prompt. At the prompt, write:
+Then activate InvokeAI's python virtualenv as follows (with quotes):
+
+```
+".venv/Scripts/activate"
+````
+
+And now you can tell InvokeAI to process your prompt file.
 
 ```
 invokeai --outdir "output_directory_location" --from_file "the_prompt_file_you_just_generated.txt"
