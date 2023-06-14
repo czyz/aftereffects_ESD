@@ -33,7 +33,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 
 # **Walkthrough Video**
 
-[![Watch the video](https://img.youtube.com/vi/sILcfGESI44/maxresdefault.jpg)](https://www.youtube.com/watch?v=sILcfGESI44)
+[![Watch the video](docs/images/walkthrough_thumbnail.gif)](https://www.youtube.com/watch?v=sILcfGESI44)
 
 <br>
 
