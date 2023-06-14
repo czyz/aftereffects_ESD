@@ -127,7 +127,8 @@ function initializeSeedMenu() {
 }
 
 function generateSeed() {
-    var SeedValue = generateRandomNumber() * 1000000000; //was "* 10000000000", but that occasionally exceeded the maximum allowed seed value. 
+    var maxSeedValue = Math.pow(2, 32) -1; //max seed value as per numpy (4294967295)
+    var SeedValue = generateRandomNumber() * maxSeedValue; 
     SeedText.text = Math.floor(SeedValue);
 }
 
@@ -264,9 +265,9 @@ function exportImageSequence(singleFrame) {
 
             }
             if (singleFrame) {
-                var fileFrameNumber = i + startFrameNumber - workStartFrame;
+                var fileFrameNumber = i + startFrameNumber - workStartFrame - 1;
             } else {
-                var fileFrameNumber = i + startFrameNumber;
+                var fileFrameNumber = i + startFrameNumber - 1;
             }
             var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + fileFrameNumber).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
 
