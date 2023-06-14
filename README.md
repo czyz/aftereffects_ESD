@@ -14,7 +14,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 
 # **Table of Contents**
 
-* [Walkthrough&nbsp;Video] (#walkthrough)
+* [Walkthrough Video](#walkthrough)
 * [Why?](#why)
 * [Installation](#installation)
 * [How To Use](#how-to-use)
@@ -32,7 +32,10 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 <br>
 
 # **Walkthrough Video**
+
 [![Watch the video](https://img.youtube.com/vi/sILcfGESI44/maxresdefault.jpg)](https://www.youtube.com/watch?v=sILcfGESI44)
+
+<br>
 
 # **Why?**
 
