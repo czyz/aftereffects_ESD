@@ -11,6 +11,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 <br>
 
 <img align="right" src="docs/images/lincoln_test.gif"/>
+
 # **Table of Contents**
 
 * [Walkthrough](#walkthrough)
