@@ -94,6 +94,8 @@ ExportSequence.onClick = function() {
 ExportCurrentFrame.onClick = function() { 
     
     exportImageSequence(true);
+    //need to find out why the window isn't closing after this.
+    ExportToStableDiffusion.close();
 
 }
 
@@ -125,7 +127,7 @@ function initializeSeedMenu() {
 }
 
 function generateSeed() {
-    var SeedValue = generateRandomNumber() * 10000000000;
+    var SeedValue = generateRandomNumber() * 1000000000; //was "* 10000000000", but that occasionally exceeded the maximum allowed seed value. 
     SeedText.text = Math.floor(SeedValue);
 }
 
@@ -136,8 +138,27 @@ function exportImageSequence(singleFrame) {
     saveGFPGanSettings();
     saveMiscSettings();
 
+    var output_modules = getOutputModuleTemplateNames();
+    var number_of_output_modules = output_modules.length;
+    var png_output_modules_installed = false;
+
+    for (var i=1; i<=number_of_output_modules; i++){
+        if ( "PNG with alpha" == (output_modules[i]) || "PNG sequence" == output_modules[i]) { 
+
+            png_output_modules_installed = true;
+
+        }
+        i++;
+    }
+
+    if (png_output_modules_installed == false) {
+        alert("Please install the PNG sequence output modules.");
+        return;
+    } 
+
     if (OutputLocation.text == "Output Location") {
         alert("Please set an output location.");
+        return;
     } else {
 
         var comp = app.project.activeItem;
@@ -145,6 +166,8 @@ function exportImageSequence(singleFrame) {
         var current_frame = app.project.activeItem.time / app.project.activeItem.frameDuration;
         var origWorkStartFrame = app.project.activeItem.workAreaStart / app.project.activeItem.frameDuration;
         var origWorkDurationFrames = app.project.activeItem.workAreaDuration / app.project.activeItem.frameDuration;
+
+        var startFrameNumber = app.project.activeItem.displayStartFrame;
 
 
 //set the comp duration to start and end on the current frame if we're exporting a single frame
@@ -155,6 +178,7 @@ function exportImageSequence(singleFrame) {
         } else {
             //exporting single frames.
             workStartFrame = current_frame;
+            startFrameNumber = current_frame + startFrameNumber;
             workDurationFrames = 1;
         }
                 
@@ -192,30 +216,33 @@ function exportImageSequence(singleFrame) {
         if (MLSettings_layer_check.length < 3) {
             alert("Comp has no proper ML_settings layer. Please create one."); //Either we have no ML Settings layer or it doesn't contain all 3 settings
             throw("ML_settings layer required");
+            return;
         }
-
-        //create subdirectory at output location if needed. If it already exists, create one with an incremented number at its end.
-        //        path: OutputLocationPanel
-        var f = new Folder(OutputLocation.text+"/"+comp.name);
-        if (!f.exists) {
-            f.create();
-        } else {
-            var filenumber = 0;
-            while (f.exists) {
-                f = new Folder(OutputLocation.text+"/"+comp.name+"_"+filenumber);
-                filenumber++;
-            }
-            f.create();
-        }
-
-
-        var ESDBatchFile = new File(f.toString() + "/"+comp.name+".txt");
 
         if (!canWriteFiles()) {
             alert("Can't write files, please check settings.");
+            return;
         } else {
-            ESDBatchFile.encoding = "utf-8";
-            ESDBatchFile.open("a");
+            //create subdirectory at output location if needed. If it already exists, create one with an incremented number at its end.
+            //        path: OutputLocationPanel
+            var f = new Folder(OutputLocation.text+"/"+comp.name);
+            if (!f.exists) {
+                f.create();
+            } else {
+                var filenumber = 0;
+                while (f.exists) {
+                    f = new Folder(OutputLocation.text+"/"+comp.name+"_"+filenumber);
+                    filenumber++;
+                }
+                f.create();
+            }
+
+
+            var ESDBatchFile = new File(f.toString() + "/"+comp.name+".txt");
+
+
+                ESDBatchFile.encoding = "utf-8";
+                ESDBatchFile.open("a");
         }
 
         // format of a line in the text file
@@ -223,7 +250,7 @@ function exportImageSequence(singleFrame) {
         
         //iterate through frames from start to end and get keyframe values and prompts and whatnot
         
-        for (var i=workStartFrame; i < workDurationFrames; i++) { //crawling through the comp frame by frame
+        for (var i=workStartFrame; i < (workStartFrame + workDurationFrames); i++) { //crawling through the comp frame by frame
             var writeLine = "";
             var prompts_string="";
             app.project.activeItem.time = i*app.project.activeItem.frameDuration;
@@ -236,7 +263,12 @@ function exportImageSequence(singleFrame) {
                 }
 
             }
-            var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + i).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
+            if (singleFrame) {
+                var fileFrameNumber = i + startFrameNumber - workStartFrame;
+            } else {
+                var fileFrameNumber = i + startFrameNumber;
+            }
+            var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + fileFrameNumber).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
 
             //padStart isn't supported by Extendscript, ah well. So this doesn't work, hence the slice hack above            var testPad = 'argh'.padStart(10,"0"); 
 
@@ -269,6 +301,8 @@ function exportImageSequence(singleFrame) {
 
             writeLine += " --sampler " + SamplerMenu.selection.text;
 
+            // writeLine += " --outdir " + f.toString() + "/output/"+comp.name+" ;
+
             writeLine = writeLine.replace(/ +/g, ' '); //replaces multiple spaces with a single space just to sanitize
 
 
@@ -297,7 +331,13 @@ function exportImageSequence(singleFrame) {
             module.applyTemplate("PNG sequence");
         }
 
-        queued.timeSpanStart = workStartFrame * app.project.activeItem.frameDuration;
+        if (singleFrame) {
+            if (! ((queued.timeSpanStart == 0) && ((workStartFrame * app.project.activeItem.frameDuration) == 0 )) ) {
+                queued.timeSpanStart = workStartFrame * app.project.activeItem.frameDuration;
+            }    
+        }
+
+        // queued.timeSpanStart = startFrameNumber * app.project.activeItem.frameDuration; 
         queued.timeSpanDuration = workDurationFrames * app.project.activeItem.frameDuration;
 
         // module.file = File(OutputLocationPanel.OutputLocation.text+"/"+comp.name+"_[#####].png");
@@ -310,22 +350,58 @@ function exportImageSequence(singleFrame) {
 
         comp.openInViewer();
         Show_prompt_text_layers(PromptLayers);
+
     }
 }
 
-function canWriteFiles() { //from a comment by Tomas Sinkunas at https://community.adobe.com/t5/after-effects-discussions/create-a-txt-file-in-extendscript/m-p/9645024
-    if (isSecurityPrefSet()) return true;
-    alert(script.name + " requires access to write files.\n" +
-        "Go to the \"General\" panel of the application preferences and make sure " +
-        "\"Allow Scripts to Write Files and Access Network\" is checked.");
-    app.executeCommand(2359);
-    return isSecurityPrefSet();
-    function isSecurityPrefSet() {
-        return app.preferences.getPrefAsLong(
-            "Main Pref Section",
-            "Pref_SCRIPTING_FILE_NETWORK_SECURITY"
-        ) === 1;
-    }
+function getOutputModuleTemplateNames()
+//taken from a comment by A. Cobb at https://community.adobe.com/t5/after-effects-discussions/how-to-list-output-module-templates/td-p/4127207
+{
+  var currentOMName;
+  var OMStringsPrefSection = "Output Module Spec Strings Section v28";
+  var OMStringsKeyPrefix = "Output Module Spec Strings Name ";
+  var hiddenPrefixRE = /_HIDDEN/;
+  var OMList = new Array();
+
+  for(var i = 0; app.preferences.havePref(OMStringsPrefSection, OMStringsKeyPrefix+i, PREFType.PREF_Type_MACHINE_INDEPENDENT_OUTPUT); i++)
+  {
+    currentOMName = app.preferences.getPrefAsString(OMStringsPrefSection, OMStringsKeyPrefix+i, PREFType.PREF_Type_MACHINE_INDEPENDENT_OUTPUT);
+    if(currentOMName.match(hiddenPrefixRE)==null) OMList.push(currentOMName);
+  }
+  return OMList;
+}
+
+
+function canWriteFiles() {
+    //from a comment by Tomas Sinkunas at https://community.adobe.com/t5/after-effects-discussions/how-can-i-check-whether-if-quot-allow-scripts-to-write-files-and-access-network-quot-is-enable-using/m-p/10869640
+	var appVersion, commandID, scriptName, tabName;
+
+	appVersion = parseFloat(app.version);
+
+	commandID = 2359;
+	tabName = 'General';
+	if (appVersion >= 16.1) {
+		commandID = 3131;
+		tabName = 'Scripting & Expressions';
+	}
+
+	if (isSecurityPrefSet()) return true;
+
+	scriptName = (script && script.name) ? script.name : 'Script';
+	alert(message = scriptName + ' requires access to write files.\n' +
+		'Go to the "' + tabName + '" panel of the application preferences and make sure ' +
+		'"Allow Scripts to Write Files and Access Network" is checked.');
+
+	app.executeCommand(commandID);
+
+	return isSecurityPrefSet();
+
+	function isSecurityPrefSet() {
+		return app.preferences.getPrefAsLong(
+			'Main Pref Section',
+			'Pref_SCRIPTING_FILE_NETWORK_SECURITY'
+		) === 1;
+	}
 }
 
 function examplePaths() {

@@ -78,8 +78,8 @@ AddMLSettings.onClick = function() {
     slider1.name = "steps";
 
     var slider4 = MLSettingsLayer.Effects.addProperty("ADBE Slider Control");
-    slider1.property(1).setValue(1.0);
-    slider1.name = "inpainting_strength";
+    slider4.property(1).setValue(1.0);
+    slider4.name = "inpainting_strength";
 
 
     app.endUndoGroup();
@@ -148,7 +148,7 @@ app.beginUndoGroup("Add ESD Prompt");
     PromptSourceTextProperties.setValue(PromptDocument);
 
     var slider = PromptText.Effects.addProperty("ADBE Slider Control"); 
-    slider.property(1).setValueAtTime(0, 1); //setting a keyframe so hitting the 'u' key in the timeline will display this value
+    slider.property(1).setValueAtTime(0, 0.99); //setting a keyframe so hitting the 'u' key in the timeline will display this value. Changed from 1 to 0.99 to get around a possible bug in InvokeAI.
     // slider.property(1).setValue(1); //for no keyframes
     slider.name = "prompt_strength";
 
@@ -278,7 +278,7 @@ MakeExplainComp.onClick = function() {
 
 LaunchExportWindow.onClick = function() {
 //launch the output window
-//@include "Export_to_stable_diffusion/ESD_export_window.jsx"
+//@include "../Export_to_stable_diffusion/ESD_export_window.jsx"
 }
 
 function Hide_prompt_text_layers(ESDPromptLayers) {
