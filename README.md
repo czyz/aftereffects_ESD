@@ -2,8 +2,8 @@
 
 <!-- An Adobe After Effects ScriptUI script for generating both image sequences and prompt files for Stable Diffusion, using the InvokeAI "dream.py" script. -->
 
-<p align="center">
-<img src="docs/images/Panel_v2.jpg" width="25%"/> <img src="docs/images/Export_v2.jpg" width="65%"/>
+<p align="center" valign="top">
+<img src="docs/images/Panel_v2.jpg" width="35%"/> <img src="docs/images/Export_v2.jpg" width="55%"/>
 </p>
 
 This After Effects script aims to turn Adobe After Effects into a versatile tool for creating image sequences and accompanying prompt batch files to be processed by [InvokeAI](https://github.com/invoke-ai/InvokeAI/blob/main/README.md)'s dream.py script. 
