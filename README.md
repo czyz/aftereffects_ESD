@@ -32,7 +32,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 <br>
 
 # **Walkthrough**
-In the first 8 minutes this video covers installing the script, using it to prepare a composition, exporting a prompt file and image sequence, processing the prompt file and images through InvokeAI, and then creating a composition that compares the original video and the resulting stable diffusion image sequence. The second half of the video sets up and runs a more complicated prompt file with keyframed image_strength and prompt weights.<br>
+In its first 8 minutes this video covers installing the script, using it to prepare a composition, exporting a prompt file and image sequence, processing the prompt file and images through InvokeAI, and then creating a composition that compares the original video and the resulting stable diffusion image sequence. The second half of the video sets up and runs a more complicated prompt file with keyframed image_strength and prompt weights.<br>
 
 [![Watch the video](docs/images/walkthrough_thumbnail2.gif)](https://www.youtube.com/watch?v=sILcfGESI44)
 
@@ -71,12 +71,12 @@ Here's an incomplete list of ideas to which this script might be of use:
 <br>
 
 - Install the scriptUI Panel and support files<br>
-  - Copy "ESD Composition Setup.jsx" and the folder "Export_to_stable_diffusion" into:
+  - Copy "ESD Composition Setup.jsx" and the entire folder "Export_to_stable_diffusion" into your After Effects installation's "ScriptUI Panels" folder. This can be found in the following locations:
 
-    - On macOS:
+    - On macOS:<br>
     "/Applications/Adobe After Effects (version e.g. 2023)/Scripts/ScriptUI Panels"
 
-    - On Windows: 
+    - On Windows:<br>
     "Program Files\Adobe\Adobe After Effects (version e.g. 2023)\Support Files\Scripts\ScriptUI Panels"
     
 - Restart or launch After Effects
