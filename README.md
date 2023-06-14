@@ -35,7 +35,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 In its first 8 minutes this video covers installing the script, using it to prepare a composition, exporting a prompt file and image sequence, processing the prompt file and images through InvokeAI, and then creating a composition that compares the original video and the resulting stable diffusion image sequence. The second half of the video sets up and runs a more complicated prompt file with keyframed image_strength and prompt weights.<br>
 
 [![Watch the video](docs/images/walkthrough_thumbnail2.gif)](https://www.youtube.com/watch?v=sILcfGESI44)<br>
-text links: [youtube](https://www.youtube.com/watch?v=sILcfGESI44), [vimeo](https://vimeo.com/836260883/510a3adb33?activityReferer=1)
+text links: [youtube](https://www.youtube.com/watch?v=sILcfGESI44), [vimeo](https://vimeo.com/836260883/510a3adb33?activityReferer=1)<br>
 The youtube version is slightly clearer than the vimeo if set to 4k.
 
 <br>
