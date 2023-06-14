@@ -32,7 +32,7 @@ This After Effects script aims to turn Adobe After Effects into a versatile tool
 <br>
 
 # **Walkthrough**
-
+In the first 8 minutes this video covers installing the script, using it to prepare a composition, exporting a prompt file and image sequence, processing the prompt file and images through InvokeAI, and then creating a composition that compares the original video and the resulting stable diffusion image sequence.<br>
 [![Watch the video](docs/images/walkthrough_thumbnail2.gif)](https://www.youtube.com/watch?v=sILcfGESI44)
 
 <br>
@@ -104,7 +104,6 @@ Note: If your image contains alpha (for example if you've used After Effects mas
 3. Click the panel's "+ML_Settings Layer" button to add a layer with controls for Image_Strength, cfg_scale, and steps. The controls are all sliders that can be found in the 'Effects' controls for that new layer. For the accepted ranges of these values, please see the InvokeAI documentation.
 
 <br clear=all><img align="right" hspace="5" src="docs/images/6_v2.jpg" />
-
 4. Click the panel's "+Prompt Layer" button as many times as you like to generate your prompt text layers. You can optionally enter your prompt text before pressing the button, as a streamlining measure, but you can always just edit the text later as you see fit. The prompt_strength value can be set (use values from 0 to 1) via the control in the Effects section of each prompt text layer.
 
 Note: Prompts can call on [LoRA models](https://stable-diffusion-art.com/lora/). For example the prompt used to generate the ink and paint version of myself for the picture-in-picture in the walkthrough video was "withLora(Pencil_Sketch_by_vizsumit,0.6) person sketch".
