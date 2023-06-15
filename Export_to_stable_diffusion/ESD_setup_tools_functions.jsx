@@ -253,6 +253,10 @@ MakeExplainComp.onClick = function() {
                 'comp(thisComp.layer(thisComp.numLayers -1).name).layer("' + PromptLayers[j][1] + '").text.sourceText }';
                 PromptSourceTextProperties.setValue(PromptDisplayDocument);
 
+                PromptDisplayTextLayer.property("Transform").property("Opacity").expression = 'if ( comp(thisComp.layer(thisComp.numLayers -1).name).layer("' + 
+                PromptLayers[j][1] + '").active ) { ((comp(thisComp.layer(thisComp.numLayers -1).name).layer("' + 
+                PromptLayers[j][1] + '").effect("prompt_strength")("Slider") * .8) + .2)*100}';
+            
                 var textRect = PromptDisplayTextLayer.sourceRectAtTime(0,false);
 
                 PromptDisplayDocument.justification = ParagraphJustification.LEFT_JUSTIFY;
