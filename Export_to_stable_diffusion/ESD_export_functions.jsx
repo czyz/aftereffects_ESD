@@ -267,7 +267,7 @@ function exportImageSequence(singleFrame) {
             if (singleFrame) {
                 var fileFrameNumber = i + startFrameNumber - workStartFrame - 1;
             } else {
-                var fileFrameNumber = i + startFrameNumber - 1;
+                var fileFrameNumber = i + startFrameNumber; //need to figure out the conditions under which this needs to be startFrameNumber - 1
             }
             var fileAndPath = fileWithPath(f.toString(),comp.name + "_" + ("00000" + fileFrameNumber).slice(-5) + ".png"); //will change this to use padStart once I can get that working.
 
