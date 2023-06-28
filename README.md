@@ -42,7 +42,7 @@ The youtube version is slightly clearer than the vimeo if set to 4k.
 
 # **Why?**
 
-Widespread access to quality text-to-image and image-to-image machine learning models is a new phenomenon, and it's difficult to predict what kinds of inputs we'll all be passing to the model in a year or two. Versatile tools serving as middleware to feed prompts and images to the machine learning models are great for exploration. 
+Widespread access to quality text-to-image and image-to-image machine learning models is a new phenomenon, and it's difficult to predict what kinds of inputs we'll all be passing to the model in a year or two. Versatile tools serving as middleware to feed prompts and images to the machine learning models felt like something that would enable greater exploration. 
 
 After Effects is a compositing application that can export PNG sequences and also features a **very** extensive toolset for keyframing changes in values over time and/or scripting values in Javascript. This script is meant to add functions that help patch the output of After Effect's user-friendly tools into InvokeAI, which then feeds commands to Stable Diffusion. Ultimately the script is meant to aid in the use of InvokeAI for the exploration of the use of image and prompt batch sequences for animation or even single-image settings exploration. 
 
